@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Image, Dimensions, View, Text, SafeAreaView } from 'react-native';
 
+
+
 import topo from '../../assets/assets/topo.png';
 import logo from '../../assets/assets/logo.png';
 
@@ -13,8 +15,8 @@ export default function Cesta() {
             <Text style={estilos.titulo}>Detalhes da cesta</Text>
             <Text style={estilos.subtitulo}>Cesta de Verduras</Text>
 
-            <View>
-                <Image source={logo} style={estilos.ImagemFazenda}/>
+            <View style={estilos.fazenda}>
+                <Image source={logo} style={estilos.imagemFazenda}/>
                 <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
             </View>
             <Text style={estilos.descricao}>Itens de produtos específicos da Jenny Jack Farm</Text>
@@ -51,13 +53,18 @@ const estilos = StyleSheet.create({
         fontWeight: "bold",
         color:"#464646", 
     },
-    ImagemFazenda:{
+    fazenda:{
+        flexDirection: "row",
+        paddingVertical: 12,
+    },
+    imagemFazenda:{
         width: 32,
         height: 32,    
     },
     nomeFazenda:{
         fontSize: 16,
-        lineHeight: 26,    
+        lineHeight: 26,
+        marginLeft:12,    
     },
     descricao:{
         color:"#A3A3A3",
